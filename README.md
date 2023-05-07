@@ -15,7 +15,7 @@ Mögliche Werte des Sensors sind:
 
 Zur Konfiguration Deines Standorts ersetze die PLZ in der Sensorkonfiguration (`zip`) durch Deine eigene: `zip=76131`
 
-Eine Beispiel-Karte für Das Lovelace-Dashboard findest Du in der Datei [simple_lovelace_gauge.yml](simple_lovelace_gauge.yml).
+Eine Beispiel-Karte für das Lovelace-Dashboard findest Du in der Datei [simple_lovelace_gauge.yml](simple_lovelace_gauge.yml).
 
 Ideen oder Bug Reports kannst Du [hier](issues/) eintragen.
 
