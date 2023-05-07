@@ -1,4 +1,4 @@
-_(See English description below)_
+_(Find the [English project description](#stromgedacht-api-sensor-for-home-assistant) below)_
 
 ## StromGedacht API Sensor für Home Assistant
 
@@ -19,12 +19,13 @@ Eine Beispiel-Karte für Das Lovelace-Dashboard findest Du in der Datei [simple_
 
 Ideen oder Bug Reports kannst Du [hier](issues/) eintragen.
 
+Copyright (c) 2023 by [Jean Pierre Wenzel](https://github.com/jpwenzel/).
+
 Weitere Infos findest Du hier:
 
 - StromGedacht (TransnetBW): <https://www.stromgedacht.de/>
 - StromGedacht API Dokumentation: <https://api.stromgedacht.de/>
 - Home Assistant Sensor Konfiguration: <https://www.home-assistant.io/integrations/sensor/>
-
 
 ## StromGedacht API sensor for Home Assistant
 
@@ -44,6 +45,8 @@ To configure the location for which data is requested, replace the `zip` paramet
 You can find a simple gauge to be used with the Lovelace dashboard in [simple_lovelace_gauge.yml](simple_lovelace_gauge.yml).
 
 Ideas or bugs can be reported [here](issues/).
+
+Copyright (c) 2023 by [Jean Pierre Wenzel](https://github.com/jpwenzel/).
 
 More info:
 
