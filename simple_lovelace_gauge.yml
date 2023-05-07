@@ -1,0 +1,15 @@
+type: gauge
+entity: sensor.stromgedacht_status
+name: StromGedacht Status
+min: 1
+max: 5
+needle: true
+segments:
+  - from: 1
+    color: green
+  - from: 2
+    color: yellow
+  - from: 3
+    color: orange
+  - from: 4
+    color: red
