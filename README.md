@@ -17,6 +17,8 @@ Zur Konfiguration Deines Standorts ersetze die PLZ in der Sensorkonfiguration (`
 
 Eine Beispiel-Karte für das Lovelace-Dashboard findest Du in der Datei [simple_lovelace_gauge.yml](simple_lovelace_gauge.yml).
 
+![Lovelace Dashboard Karte](lovelace_gauge.png)
+
 Ideen oder Bug Reports kannst Du [hier](issues/) eintragen.
 
 Copyright (c) 2023 by [Jean Pierre Wenzel](https://github.com/jpwenzel/).
@@ -43,6 +45,8 @@ Available states are:
 To configure the location for which data is requested, replace the `zip` parameter with your own ZIP code: `zip=76131`
 
 You can find a simple gauge to be used with the Lovelace dashboard in [simple_lovelace_gauge.yml](simple_lovelace_gauge.yml).
+
+![Lovelace Dashboard card](lovelace_gauge.png)
 
 Ideas or bugs can be reported [here](issues/).
 
