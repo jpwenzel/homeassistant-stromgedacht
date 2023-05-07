@@ -1,0 +1,11 @@
+sensor:
+  - name: StromGedacht status
+    platform: rest
+    resource_template: https://api.stromgedacht.de/v1/now?zip=76131
+    headers:
+      User-Agent: HomeAssistant
+      Content-Type: application/json
+    json_attributes: 
+      - state
+    value_template: >
+      {{ value_json['state'] }}
