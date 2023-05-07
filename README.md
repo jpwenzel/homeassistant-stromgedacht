@@ -1,5 +1,3 @@
-# homeassistant-stromgedacht
-
 _(See English description below)_
 
 ## StromGedacht API Sensor für Home Assistant
@@ -18,6 +16,8 @@ Mögliche Werte des Sensors sind:
 Zur Konfiguration Deines Standorts ersetze die PLZ in der Sensorkonfiguration (`zip`) durch Deine eigene: `zip=76131`
 
 Eine Beispiel-Karte für Das Lovelace-Dashboard findest Du in der Datei [simple_lovelace_gauge.yml](simple_lovelace_gauge.yml).
+
+Ideen oder Bug Reports kannst Du [hier](issues/) eintragen.
 
 Weitere Infos findest Du hier:
 
@@ -42,6 +42,8 @@ Available states are:
 To configure the location for which data is requested, replace the `zip` parameter with your own ZIP code: `zip=76131`
 
 You can find a simple gauge to be used with the Lovelace dashboard in [simple_lovelace_gauge.yml](simple_lovelace_gauge.yml).
+
+Ideas or bugs can be reported [here](issues/).
 
 More info:
 
