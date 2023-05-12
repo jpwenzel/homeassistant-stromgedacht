@@ -1,5 +1,6 @@
 sensor:
-  - name: StromGedacht status
+  - name: StromGedacht status code
+    unique_id: stromgedacht_status_code
     platform: rest
     resource_template: https://api.stromgedacht.de/v1/now?zip=76131
     headers:
@@ -9,3 +10,13 @@ sensor:
       - state
     value_template: >
       {{ value_json['state'] }}
+  - name: StromGedacht status message
+    platform: template
+    value_template: >-
+      {% set mapper =  {
+          '1' : 'No action needed',
+          '2' : 'Bring forward consumption',
+          '3' : 'Reduce consumption (save cost & CO2)',
+          '4' : 'Reduce consumption (prevent energy shortage)' } %}
+      {% set state =  states('sensor.stromgedacht_status_code') %}
+      {{ mapper[state] if state in mapper else 'N/A' }}
