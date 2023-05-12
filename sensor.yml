@@ -1,6 +1,6 @@
 sensor:
-  - name: StromGedacht status code
-    unique_id: stromgedacht_status_code
+  - name: StromGedacht status code (now)
+    unique_id: stromgedacht_status_code_now
     platform: rest
     resource_template: https://api.stromgedacht.de/v1/now?zip=76131
     headers:
@@ -10,7 +10,7 @@ sensor:
       - state
     value_template: >
       {{ value_json['state'] }}
-  - name: StromGedacht status message
+  - name: StromGedacht status message (now)
     platform: template
     value_template: >-
       {% set mapper =  {
@@ -20,3 +20,26 @@ sensor:
           '4' : 'Reduce consumption (prevent energy shortage)' } %}
       {% set state =  states('sensor.stromgedacht_status_code') %}
       {{ mapper[state] if state in mapper else 'N/A' }}
+
+  - name: StromGedacht status code (forecast)
+    unique_id: stromgedacht_status_code_forecast
+    platform: rest
+    resource_template: https://api.stromgedacht.de/v1/states?zip=76131&from=2023-05-08T00%3A00%3A00%2B02%3A00&to=2023-05-14T23%3A59%3A59%2B02%3A00
+    headers:
+      User-Agent: HomeAssistant
+      Content-Type: application/json
+    json_attributes: 
+      - states
+    value_template: >
+      {{ value_json['states'] }}
+  # - name: StromGedacht status message (forecast)
+  #   platform: template
+  #   value_template: >-
+  #     {% set mapper =  {
+  #         '1' : 'No action needed',
+  #         '2' : 'Bring forward consumption',
+  #         '3' : 'Reduce consumption (save cost & CO2)',
+  #         '4' : 'Reduce consumption (prevent energy shortage)' } %}
+  #     {% for result in states('sensor.stromgedacht_status_code_forecast') %}
+  #       From {{ result['from'] to result['to']: mapper[result['state']] | join('\n') }}
+  #     {% endfor %}
