@@ -1,5 +1,5 @@
 type: gauge
-entity: sensor.stromgedacht_status
+entity: sensor.stromgedacht_status_code
 name: StromGedacht Status
 min: 1
 max: 5
