@@ -6,18 +6,18 @@ sensor:
     headers:
       User-Agent: HomeAssistant
       Content-Type: application/json
-    json_attributes: 
+    json_attributes:
       - state
     value_template: >
       {{ value_json['state'] }}
   - name: StromGedacht status message
     platform: template
     value_template: >-
-      {% set mapper =  {
+      {% set mapper = {
           '-1' : 'Use electricity preferentially',
           '1' : 'No action needed',
           '2' : 'Bring forward consumption',
           '3' : 'Reduce consumption (save cost & CO2)',
           '4' : 'Reduce consumption (prevent energy shortage)' } %}
-      {% set state =  states('sensor.stromgedacht_status_code') %}
+      {% set state = states('sensor.stromgedacht_status_code') %}
       {{ mapper[state] if state in mapper else 'N/A' }}

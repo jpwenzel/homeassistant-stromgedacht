@@ -1,15 +1,18 @@
 type: gauge
 entity: sensor.stromgedacht_status_code
 name: StromGedacht Status
-min: 1
+min: -1
 max: 5
 needle: true
 segments:
-  - from: 1
+  # Using "segment max value - 0.5" as "from" value to align needle in the middle of the segment
+  - from: -1.5
+    color: lawngreen
+  - from: 0.5
     color: green
-  - from: 2
+  - from: 1.5
     color: yellow
-  - from: 3
+  - from: 2.5
     color: orange
-  - from: 4
+  - from: 3.5
     color: red
