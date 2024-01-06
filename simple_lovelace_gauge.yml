@@ -6,7 +6,7 @@ max: 4.5
 needle: true
 segments:
   # Using "segment max value - 0.5" as "from" value to align needle in the middle of the segment
-  - from: -1.5
+  - from: -1.5 # Hack for "-1" value
     color: lawngreen
   - from: 0.5
     color: green
