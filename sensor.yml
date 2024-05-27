@@ -15,7 +15,7 @@ sensor:
     value_template: >-
       {% set mapper = {
           '-1' : 'Ideally use electricity now',
-          '1' : 'Normale operation',
+          '1' : 'Normal operation',
           '3' : 'Reduce consumption (save cost & CO2)',
           '4' : 'Reduce consumption (prevent power shortfalls)' } %}
       {% set state = states('sensor.stromgedacht_status_code') %}
