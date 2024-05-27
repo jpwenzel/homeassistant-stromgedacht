@@ -14,10 +14,9 @@ sensor:
     platform: template
     value_template: >-
       {% set mapper = {
-          '-1' : 'Use electricity preferentially',
-          '1' : 'No action needed',
-          '2' : 'Bring forward consumption',
+          '-1' : 'Ideally use electricity now',
+          '1' : 'Normale operation',
           '3' : 'Reduce consumption (save cost & CO2)',
-          '4' : 'Reduce consumption (prevent energy shortage)' } %}
+          '4' : 'Reduce consumption (prevent power shortfalls)' } %}
       {% set state = states('sensor.stromgedacht_status_code') %}
       {{ mapper[state] if state in mapper else 'N/A' }}
