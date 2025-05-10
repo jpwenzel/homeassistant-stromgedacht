@@ -10,7 +10,6 @@ Mögliche Werte des Sensors sind:
 
 - `-1`= supergrün
 - `1` = grün
-- `2` = gelb _(nicht mehr in der App verwendet)_
 - `3` = orange
 - `4` = rot
 
@@ -22,7 +21,7 @@ Eine Beispiel-Karte für das Lovelace-Dashboard findest Du in der Datei [simple_
 
 Ideen oder Bug Reports kannst Du [hier](issues/) eintragen.
 
-Copyright (c) 2023–2024 by [Jean Pierre Wenzel](https://github.com/jpwenzel/).
+Copyright (c) 2023–2025 by [Jean Pierre Wenzel](https://github.com/jpwenzel/).
 
 Weitere Infos findest Du hier:
 
@@ -40,7 +39,6 @@ Available states are:
 
 - `-1` = supergreen
 - `1` = green
-- `2` = yellow _(not used in their app anymore)_
 - `3` = amber/orange
 - `4` = red
 
@@ -52,7 +50,7 @@ You can find a simple gauge to be used with the Lovelace dashboard in [simple_lo
 
 Ideas or bugs can be reported [here](issues/).
 
-Copyright (c) 2023–2024 by [Jean Pierre Wenzel](https://github.com/jpwenzel/).
+Copyright (c) 2023–2025 by [Jean Pierre Wenzel](https://github.com/jpwenzel/).
 
 More info:
 
