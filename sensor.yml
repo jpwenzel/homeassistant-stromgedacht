@@ -2,7 +2,7 @@ sensor:
   - name: StromGedacht status code
     unique_id: stromgedacht_status_code
     platform: rest
-    resource_template: https://api.stromgedacht.de/v1/now?zip=76131
+    resource_template: "https://api.stromgedacht.de/v1/now?zip={{ states('input_text.stromgedacht_zip_code') }}"
     headers:
       User-Agent: HomeAssistant
       Content-Type: application/json

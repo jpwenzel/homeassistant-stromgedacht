@@ -13,7 +13,12 @@ Mögliche Werte des Sensors sind:
 - `3` = orange
 - `4` = rot
 
-Zur Konfiguration Deines Standorts ersetze die Postleitzahl (PLZ) in der Sensorkonfiguration (`zip`) durch die PLZ des gewünschten Standorts: `zip=76131`
+### Einrichtung
+
+1. Füge den Inhalt von [helpers.yml](helpers.yml) in Deine `configuration.yaml` ein (oder binde die Datei per `homeassistant: packages:` ein). Dieser Helper speichert die PLZ als konfigurierbaren Wert in Home Assistant.
+2. Füge den Inhalt von [sensor.yml](sensor.yml) entsprechend in Deine Konfiguration ein.
+3. Starte Home Assistant neu.
+4. Ändere die PLZ über **Einstellungen → Geräte & Dienste → Helfer → StromGedacht ZIP code** – oder direkt im Dashboard über die Entity `input_text.stromgedacht_zip_code`.
 
 Eine Beispiel-Karte für das Lovelace-Dashboard findest Du in der Datei [simple_lovelace_gauge.yml](simple_lovelace_gauge.yml).
 
@@ -42,7 +47,12 @@ Available states are:
 - `3` = amber/orange
 - `4` = red
 
-To configure the location for which data is requested, replace the `zip` parameter with the German ZIP code of the location you're interested in: `zip=76131`
+### Setup
+
+1. Add the contents of [helpers.yml](helpers.yml) to your `configuration.yaml` (or include the file via `homeassistant: packages:`). This helper stores the ZIP code as a configurable value in Home Assistant.
+2. Add the contents of [sensor.yml](sensor.yml) to your configuration accordingly.
+3. Restart Home Assistant.
+4. Change the ZIP code via **Settings → Devices & Services → Helpers → StromGedacht ZIP code** — or directly on the dashboard via the entity `input_text.stromgedacht_zip_code`.
 
 You can find a simple gauge to be used with the Lovelace dashboard in [simple_lovelace_gauge.yml](simple_lovelace_gauge.yml).
 
@@ -50,7 +60,7 @@ You can find a simple gauge to be used with the Lovelace dashboard in [simple_lo
 
 Ideas or bugs can be reported [here](issues/).
 
-Copyright (c) 2023–2025 by [Jean Pierre Wenzel](https://github.com/jpwenzel/).
+Copyright (c) 2023–2026 by [Jean Pierre Wenzel](https://github.com/jpwenzel/).
 
 More info:
 

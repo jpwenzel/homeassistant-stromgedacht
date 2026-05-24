@@ -1,0 +1,7 @@
+input_text:
+  stromgedacht_zip_code:
+    name: StromGedacht ZIP code
+    initial: "76131"
+    min: 5
+    max: 5
+    pattern: "[0-9]*"
