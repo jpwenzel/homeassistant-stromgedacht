@@ -10,13 +10,15 @@ sensor:
       - state
     value_template: >
       {{ value_json['state'] }}
-  - name: StromGedacht status message
-    platform: template
-    value_template: >-
-      {% set mapper = {
-          '-1' : 'Ideally use electricity now',
-          '1' : 'Normal operation',
-          '3' : 'Reduce consumption (save cost & CO2)',
-          '4' : 'Reduce consumption (prevent power shortfalls)' } %}
-      {% set state = states('sensor.stromgedacht_status_code') %}
-      {{ mapper[state] if state in mapper else 'N/A' }}
+
+template:
+  - sensor:
+      - name: "StromGedacht status message"
+        state: >
+          {% set mapper =  {
+              '1' : 'Normalbetrieb - Du musst nichts weiter tun',
+              '2' : 'Verbrauch vorverlegen - Strom jetzt nutzen',
+              '3' : 'Verbrauch reduzieren - Gemeinsam Kosten und CO2 sparen',
+              '4' : 'Verbrauch reduzieren - Strommangel verhindern' } %}
+          {% set state =  states('sensor.stromgedacht_status_code') %}
+          {{ mapper[state] if state in mapper else 'N/A' }}
